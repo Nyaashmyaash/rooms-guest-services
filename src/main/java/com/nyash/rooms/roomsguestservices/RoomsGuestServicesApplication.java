@@ -16,18 +16,18 @@ import java.util.function.Predicate;
 import static springfox.documentation.builders.PathSelectors.any;
 
 @EnableDiscoveryClient
-@EnableSwagger2
+//@EnableSwagger2
 @SpringBootApplication
 public class RoomsGuestServicesApplication {
 
-    @Bean
-    public Docket api(){
-        return new Docket(DocumentationType.SWAGGER_2).groupName("Guest").select()
-                .apis(RequestHandlerSelectors.basePackage("com.nyash.rooms.roomsguestservices"))
-                .paths(any()).build().apiInfo(new ApiInfo("Guest Services",
-                        "A set of services to provide data access to guests", "1.0.0", null,
-                        null,null, null));
-    }
+//    @Bean
+//    public Docket api(){
+//        return new Docket(DocumentationType.SWAGGER_2).groupName("Guest").select()
+//                .apis(RequestHandlerSelectors.basePackage("com.nyash.rooms.roomsguestservices"))
+//                .paths(any()).build().apiInfo(new ApiInfo("Guest Services",
+//                        "A set of services to provide data access to guests", "1.0.0", null,
+//                        null,null, null));
+//    }
 
     public static void main(String[] args) {
         SpringApplication.run(RoomsGuestServicesApplication.class, args);

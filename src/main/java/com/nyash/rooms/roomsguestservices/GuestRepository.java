@@ -1,6 +1,6 @@
-package com.nyash.rooms.roomsguestservices.repository;
+package com.nyash.rooms.roomsguestservices;
 
-import com.nyash.rooms.roomsguestservices.entity.Guest;
+import com.nyash.rooms.roomsguestservices.Guest;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
@@ -8,5 +8,5 @@ import org.springframework.stereotype.Repository;
 public interface GuestRepository extends CrudRepository<Guest, Long> {
     Guest findByEmailAddress(String emailAddress);
 
-    Guest findOne(long id);
+    Guest findById(long id);
 }
